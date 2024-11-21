@@ -15,23 +15,23 @@ function calcular() {
     case "soma":
       result = num1 + num2;
       break;
-    case "subtração":
+    case "subtracao":
       result = num1 - num2;
       break;
-    case "multiplicação":
+    case "multiplicacao":
       result = num1 * num2;
       break;
-    case "divisão":
+    case "divisao":
       result = num1 / num2;
       break;
     default:
-      result = 0;
+      result = "numero invalido";
   }
   document.getElementById("result").innerHTML = `Resultado = ${result}`;
 }
 function reset() {
-  const num1 = parseFloat((document.getElementById("Entrada1").value = ""));
-  const num2 = parseFloat((document.getElementById("Entrada2").value = ""));
+  document.getElementById("Entrada1").value = "";
+  document.getElementById("Entrada2").value = "";
   document.getElementById("result").innerHTML = "Resultado =";
   campoatual = 1;
 }

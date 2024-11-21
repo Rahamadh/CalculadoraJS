@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-  margin: 0 40%;
+  margin: 0 35%;
   font-size: 80px;
   color: white;
   text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
@@ -37,8 +37,13 @@ button {
 }
 .botao button {
   margin: 10px;
-  padding: 10px;
+  padding: 5px;
+  margin-left: 30px;
 }
 .resultado {
   margin: -10px 100px;
+}
+.resultado h3 {
+  padding: 15px 0px;
+  font-size: 25px;
 }
