@@ -1,0 +1,41 @@
+body {
+  background-color: rgba(68, 0, 255, 0.5);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0 40%;
+  font-size: 80px;
+  color: white;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+}
+div {
+  display: block;
+  padding: 10%;
+  margin: 5% 10%;
+  background-color: white;
+  border-radius: 10px 50px;
+  max-height: 50%;
+}
+button {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  padding: 10px;
+  margin: 15px;
+}
+
+button .calcular {
+  border: 5px solid red;
+}
+input {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+h3 {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
