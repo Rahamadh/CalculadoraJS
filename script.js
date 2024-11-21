@@ -1,24 +1,61 @@
 let campoatual = 1;
+let operacao = "soma";
 function obterValor(value) {
   if (campoatual === 1) {
     document.getElementById("Entrada1").value += value;
-    campoatual = 2;
   } else {
     document.getElementById("Entrada2").value += value;
-    campoatual = 1;
   }
 }
 function calcular() {
-  const num1 = parseFloat(document.getElementById("Entrada1").value);
-  const num2 = parseFloat(document.getElementById("Entrada2").value);
-  const resul = num1 + num2;
-  document.getElementById("result").innerHTML = `Resultado = ${resul}`;
+  const num1 = parseFloat(document.getElementById("Entrada1").value || 0);
+  const num2 = parseFloat(document.getElementById("Entrada2").value || 0);
+  let result;
+  switch (operacao) {
+    case "soma":
+      result = num1 + num2;
+      break;
+    case "subtração":
+      result = num1 - num2;
+      break;
+    case "multiplicação":
+      result = num1 * num2;
+      break;
+    case "divisão":
+      result = num1 / num2;
+      break;
+    default:
+      result = 0;
+  }
+  document.getElementById("result").innerHTML = `Resultado = ${result}`;
 }
 function reset() {
   const num1 = parseFloat((document.getElementById("Entrada1").value = ""));
   const num2 = parseFloat((document.getElementById("Entrada2").value = ""));
   document.getElementById("result").innerHTML = "Resultado =";
+  campoatual = 1;
 }
+
+document.getElementById("add").addEventListener("click", function () {
+  operacao = "soma";
+  campoatual = 2;
+  document.getElementById("Entrada2").focus();
+});
+document.getElementById("subtract").addEventListener("click", function () {
+  operacao = "subtracao";
+  campoatual = 2;
+  document.getElementById("Entrada2").focus();
+});
+document.getElementById("multiply").addEventListener("click", function () {
+  operacao = "multiplicacao";
+  campoatual = 2;
+  document.getElementById("Entrada2").focus();
+});
+document.getElementById("divide").addEventListener("click", function () {
+  operacao = "divisao";
+  campoatual = 2;
+  document.getElementById("Entrada2").focus();
+});
 
 document.getElementById("btn1").addEventListener("click", function () {
   obterValor("1");
