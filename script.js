@@ -27,6 +27,7 @@ function calcular() {
     default:
       result = "numero invalido";
   }
+
   document.getElementById("result").innerHTML = `Resultado = ${result}`;
 }
 function reset() {
